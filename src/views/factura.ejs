@@ -1,0 +1,118 @@
+<%- include ('partials/_header')  %>
+
+
+<div class="continer">
+    <div class="row mt-5">
+        <div class="col-md-7">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <h5>Compras</h5>
+                        </th>
+                        <th>
+                            <h5>Compras</h5>
+                        </th>
+                        <th>
+                            <h5>Compras</h5>
+                        </th>
+                        <th>
+                            <h5>Compras</h5>
+                        </th>
+                        <th>
+                            <h5>Ventas</h5>
+                        </th>
+                        <th>
+                            <h5>Ventas</h5>
+                        </th>
+                        <th>
+                            <h5>Ventas</h5>
+                        </th>
+                        <th>
+                            <h5>Ventas</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Id Factura</th>
+                        <th>Id Prodcuto</th>
+                        <th>Nombre prodcuto</th>
+                        <th>
+                            <br>cantidad
+                        </th>
+                        <th>
+                            <br>Precio unitario
+                        </th>
+                        <th>
+                            <br>Total
+                        </th>
+                        <th>
+                            <br>Fecha
+                        </th>
+                        <th>
+                            <br>cantidad
+                        </th>
+                        <th>
+                            <br>Precio unitario
+                        </th>
+                        <th>
+                            <br>Total
+                        </th>
+                        <th>
+                            <br>Fecha
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data) {  %>
+                    
+                    <% for(var 1 = 0; 1 < data.length 1++){ %>
+                        <tr>
+                            <td>
+                                <%= (i + 1) %>
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="continer">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body">
+                <form action="/add" method="post">
+                    <div>
+                        <h1>COMPRAS</h1>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="idProd" placeholder="Id Producto" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="nombreProd" placeholder="Nombre Producto" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="cantidadComprada" placeholder="Cantidad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="precioCompra" placeholder="Precio total" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="fechaCompra" placeholder="Fecha" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+        </div>
+
+        <br> <br>
+
+    </div>
+</div>
+
+
+<%- include ('partials/_footer')  %>
